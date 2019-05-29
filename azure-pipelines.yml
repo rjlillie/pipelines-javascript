@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  Default
+  cloud-operations
 
 steps:
 - task: NodeTool@0
