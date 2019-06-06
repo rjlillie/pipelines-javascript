@@ -24,9 +24,10 @@ steps:
     npm install --only=dev
     
 - script: |
-    npx mocha
+    mocha test --reporter mocha-junit-reporter
 
 - task: PublishTestResults@2
+  condition: succeededOrFailed()
   inputs:
+    testRunner: JUnit
     testResultsFiles: '**/TEST-RESULTS.xml'
-    testRunTitle: 'Test results for JavaScript using gulp'
