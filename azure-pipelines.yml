@@ -23,9 +23,6 @@ steps:
 - script: |
     npm install --only=dev
     
-- script: |
-    mocha test --reporter mocha-junit-reporter
-
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
