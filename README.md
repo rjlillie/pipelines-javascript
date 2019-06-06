@@ -1,4 +1,6 @@
+***
 [![Build Status](https://msi-cto.visualstudio.com/cloud-operations/_apis/build/status/rjlillie.pipelines-javascript?branchName=master)](https://msi-cto.visualstudio.com/cloud-operations/_build/latest?definitionId=56&branchName=master)
+***
 
 # Sample NodeJS application for Azure Pipelines docs
 
