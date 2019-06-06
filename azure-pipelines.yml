@@ -19,3 +19,14 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+  
+- script: |
+    npm install --only=dev
+    
+- script: |
+    gulp
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/TEST-RESULTS.xml'
+    testRunTitle: 'Test results for JavaScript using gulp'
