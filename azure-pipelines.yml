@@ -28,3 +28,14 @@ steps:
   inputs:
     testRunner: JUnit
     testResultsFiles: '**/TEST-RESULTS.xml'
+
+- task: EncodeSemverToInteger@2
+  inputs:
+    SourceSemver: '$(GitVersion_FullSemVer)'
+    OutputVariable: 'VersionCode'
+    MinorBits: '5'
+    PatchBits: '4'
+    PreReleaseTagBits: '2'
+    PreReleaseTagMap: '{"rc": 2, "beta": 1, "alpha": 0, "unstable": 0}'
+    PreReleaseNumberBits: '9'
+    TotalBits: '31'
